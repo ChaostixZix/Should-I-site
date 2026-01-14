@@ -1,0 +1,15 @@
+---
+interface Props {
+	id?: string;
+	class?: string;
+	containerClass?: string;
+}
+
+const { id, class: className = "", containerClass = "" } = Astro.props;
+---
+
+<section id={id} class:list={["w-full px-6 lg:px-8 py-20 lg:py-32", className]}>
+	<div class:list={["mx-auto max-w-[var(--container-max)]", containerClass]}>
+		<slot />
+	</div>
+</section>

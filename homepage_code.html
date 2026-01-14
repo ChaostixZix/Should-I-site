@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Should-I | Decision Intelligence</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0E7490", // Teal requested
+              "background-light": "#F7F8FA", // Off-white requested
+              "background-dark": "#111827",
+              "surface": "#FFFFFF",
+              "text-main": "#111827",
+              "text-muted": "#374151",
+              "border-light": "#E5E7EB",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"],
+              "body": ["Inter", "sans-serif"],
+            },
+            spacing: {
+                '30': '7.5rem', // 120px
+                '40': '10rem', // 160px
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F7F8FA;
+            color: #111827;
+            -webkit-font-smoothing: antialiased;
+        }
+        .editorial-text {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body class="bg-background-light text-text-main flex flex-col min-h-screen">
+<nav class="sticky top-0 z-50 w-full border-b border-border-light bg-background-light/95 backdrop-blur-sm">
+<div class="mx-auto flex h-20 max-w-[1280px] items-center justify-between px-6 lg:px-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[28px]">analytics</span>
+<span class="text-xl font-bold tracking-tight text-text-main">Should-I</span>
+</div>
+<div class="hidden items-center gap-8 md:flex">
+<a class="text-sm font-medium text-text-muted hover:text-primary transition-colors" href="#process">Process</a>
+<a class="text-sm font-medium text-text-muted hover:text-primary transition-colors" href="#industries">Industries</a>
+<a class="text-sm font-medium text-text-muted hover:text-primary transition-colors" href="#about">About</a>
+</div>
+<button class="flex items-center justify-center rounded bg-primary px-5 py-2.5 text-sm font-bold text-white transition hover:bg-cyan-800">
+                Free Business Health Check
+            </button>
+</div>
+</nav>
+<main class="flex-grow">
+<section class="relative flex min-h-[80vh] w-full flex-col justify-center px-6 lg:px-8 pt-20 pb-20">
+<div class="mx-auto flex w-full max-w-[960px] flex-col items-center text-center">
+<h1 class="font-black text-text-main text-5xl sm:text-6xl md:text-7xl leading-[1.1] tracking-[-0.03em] mb-8">
+                    Make <span class="bg-primary text-white px-2">better</span> business decisions — before they cost you real money.
+                </h1>
+<p class="max-w-[720px] text-lg sm:text-xl text-text-muted leading-relaxed mb-10 editorial-text">
+                    Most owners make big calls with incomplete information. Should-I shows you what's actually happening on the ground before you commit capital.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 mb-6">
+<button class="flex items-center justify-center rounded bg-primary px-8 py-4 text-base font-bold text-white transition hover:bg-cyan-800">
+                        Free Business Health Check
+                    </button>
+<button class="flex items-center justify-center rounded border border-border-light bg-white px-8 py-4 text-base font-medium text-text-main transition hover:border-gray-400">
+                        View Sample Report
+                    </button>
+</div>
+<p class="text-sm font-medium text-text-muted tracking-wide">
+                    Independent. Industry-specific. No sales agenda.
+                </p>
+</div>
+</section>
+<section class="w-full px-6 lg:px-8 py-20 lg:py-32 border-t border-border-light">
+<div class="mx-auto max-w-[1280px]">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
+<div class="lg:col-span-4">
+<span class="block text-primary font-bold tracking-widest uppercase text-xs mb-4">The Problem</span>
+<h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-text-main leading-tight">
+                            The most expensive mistakes feel reasonable at the time.
+                        </h2>
+</div>
+<div class="lg:col-span-8">
+<p class="text-2xl font-light leading-relaxed text-text-muted">
+                            Most business failures come from blind spots, not bad ideas. We provide the hard data you didn't know you needed—transforming vague intuition into calculated precision.
+                        </p>
+<div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-8 border-t border-border-light pt-8">
+<div>
+<h3 class="font-bold text-text-main mb-2">Hidden Liabilities</h3>
+<p class="text-text-muted text-sm leading-relaxed">Zoning changes, upcoming construction, and hidden demographic shifts that act as silent killers for new locations.</p>
+</div>
+<div>
+<h3 class="font-bold text-text-main mb-2">Market Saturation</h3>
+<p class="text-text-muted text-sm leading-relaxed">Understanding not just who is there, but who is thriving and who is struggling, and exactly why.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="w-full px-6 lg:px-8 py-20 lg:py-32 bg-white border-y border-border-light" id="process">
+<div class="mx-auto max-w-[1280px]">
+<div class="mb-16 md:mb-24">
+<h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-text-main">Should-I gives you clarity before you decide.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+<div class="flex flex-col gap-4 group">
+<div class="text-6xl font-black text-gray-200 group-hover:text-primary/20 transition-colors select-none">01</div>
+<h3 class="text-lg font-bold text-text-main leading-snug">You tell us about your business and decision.</h3>
+</div>
+<div class="flex flex-col gap-4 group">
+<div class="text-6xl font-black text-gray-200 group-hover:text-primary/20 transition-colors select-none">02</div>
+<h3 class="text-lg font-bold text-text-main leading-snug">We analyse demand, competition, catchment behaviour, and economics.</h3>
+</div>
+<div class="flex flex-col gap-4 group">
+<div class="text-6xl font-black text-gray-200 group-hover:text-primary/20 transition-colors select-none">03</div>
+<h3 class="text-lg font-bold text-text-main leading-snug">You receive a clear, decision-ready report — not a dashboard.</h3>
+</div>
+<div class="flex flex-col gap-4 group">
+<div class="text-6xl font-black text-gray-200 group-hover:text-primary/20 transition-colors select-none">04</div>
+<h3 class="text-lg font-bold text-text-main leading-snug">You decide your next move with confidence.</h3>
+</div>
+</div>
+<div class="text-center pt-8 border-t border-gray-100 max-w-2xl mx-auto">
+<p class="text-xl font-medium text-text-muted italic">"We don't tell you what to do. We show you what's true."</p>
+</div>
+</div>
+</section>
+<section class="w-full px-6 lg:px-8 py-20 lg:py-32" id="industries">
+<div class="mx-auto max-w-[1280px]">
+<div class="mb-16">
+<span class="block text-primary font-bold tracking-widest uppercase text-xs mb-4">Specialized Intelligence</span>
+<h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-text-main">Built for specific industries — because context matters.</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-surface rounded border border-border-light p-8 lg:p-12 hover:border-primary/50 transition-colors">
+<div class="size-12 rounded bg-background-light flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined">local_laundry_service</span>
+</div>
+<h3 class="text-2xl font-bold text-text-main mb-2">Laundromats</h3>
+<p class="text-text-muted mb-8">High capital expenditure, location-dependent.</p>
+<div class="space-y-4">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+<span class="text-sm text-text-main font-medium">Demand</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+<span class="text-sm text-text-main font-medium">Saturation</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+<span class="text-sm text-text-main font-medium">Pricing pressure</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+<span class="text-sm text-text-main font-medium">Location viability</span>
+</div>
+</div>
+</div>
+<div class="bg-surface rounded border border-border-light p-8 lg:p-12 hover:border-primary/50 transition-colors">
+<div class="size-12 rounded bg-background-light flex items-center justify-center mb-6 text-primary">
+<span class="material-symbols-outlined">dentistry</span>
+</div>
+<h3 class="text-2xl font-bold text-text-main mb-2">Dental Practices</h3>
+<p class="text-text-muted mb-8">Relationship-driven, saturation sensitive.</p>
+<div class="space-y-4">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+<span class="text-sm text-text-main font-medium">Patient access</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+<span class="text-sm text-text-main font-medium">Competition</span>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-1">check_circle</span>
+<span class="text-sm text-text-main font-medium">Growth constraints</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="w-full px-6 lg:px-8 py-20 lg:py-32 bg-white border-t border-border-light" id="about">
+<div class="mx-auto max-w-[800px] text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-6">verified_user</span>
+<h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-text-main mb-8">
+                    Designed to reduce regret — not sell you a story.
+                </h2>
+<div class="text-left md:text-center space-y-6">
+<p class="text-lg text-text-muted leading-relaxed">
+                        In a world of "move fast and break things," we believe in measuring twice and cutting once. Our reports are designed to be skeptical. We look for reasons <em>not</em> to invest, so when you finally do, you move forward with absolute conviction.
+                    </p>
+</div>
+</div>
+</section>
+<section class="w-full px-6 lg:px-8 py-24 bg-background-light border-t border-border-light">
+<div class="mx-auto max-w-[600px] flex flex-col items-center text-center">
+<h2 class="text-3xl font-bold text-text-main mb-6">If this decision matters, clarity is worth a few minutes.</h2>
+<p class="text-text-muted mb-8">
+                    Your next big decision shouldn't be a gamble. Let's look at the numbers together.
+                </p>
+<button class="w-full sm:w-auto flex items-center justify-center rounded bg-primary px-10 py-4 text-lg font-bold text-white transition hover:bg-cyan-800 shadow-sm">
+                    Free Business Health Check
+                </button>
+<p class="mt-4 text-xs text-text-muted">
+                    No obligation. Real insight. Clear thinking.
+                </p>
+</div>
+</section>
+</main>
+<footer class="bg-white border-t border-border-light px-6 lg:px-8 py-12">
+<div class="mx-auto max-w-[1280px] flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">analytics</span>
+<span class="font-bold text-text-main">Should-I</span>
+</div>
+<div class="flex gap-8 text-sm text-text-muted">
+<a class="hover:text-text-main" href="#">Privacy Policy</a>
+<a class="hover:text-text-main" href="#">Terms of Service</a>
+<a class="hover:text-text-main" href="#">Contact</a>
+</div>
+<div class="text-xs text-text-muted">
+                © 2023 Should-I Inc. All rights reserved.
+            </div>
+</div>
+</footer>
+</body></html>

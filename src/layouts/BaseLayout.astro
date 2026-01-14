@@ -1,0 +1,66 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = "Decision intelligence for high-stakes business investments." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="light">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title} | Should-I</title>
+		<meta name="description" content={description} />
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+	</head>
+	<body class="flex flex-col min-h-screen">
+		<nav class="sticky top-0 z-50 w-full border-b border-[var(--border)] bg-[var(--bg)]/95 backdrop-blur-sm">
+			<div class="mx-auto flex h-20 max-w-[var(--container-max)] items-center justify-between px-6 lg:px-8">
+				<div class="flex items-center gap-2">
+					<span class="material-symbols-outlined text-[var(--accent)] text-[28px]">analytics</span>
+					<span class="text-xl font-bold tracking-tight text-[var(--text)]">Should-I</span>
+				</div>
+				<div class="hidden items-center gap-8 md:flex">
+					<a href="#process" class="text-sm font-medium text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors">Process</a>
+					<a href="#industries" class="text-sm font-medium text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors">Industries</a>
+					<a href="#about" class="text-sm font-medium text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors">About</a>
+				</div>
+				<a href="https://go.should-i.ai/health-check" class="flex items-center justify-center rounded bg-[var(--accent)] px-5 py-2.5 text-sm font-bold text-white transition hover:opacity-90">
+					Free Business Health Check
+				</a>
+			</div>
+		</nav>
+
+		<main class="flex-grow">
+			<slot />
+		</main>
+
+		<footer class="bg-[var(--surface)] border-t border-[var(--border)] px-6 lg:px-8 py-12">
+			<div class="mx-auto max-w-[var(--container-max)] flex flex-col md:flex-row justify-between items-center gap-6">
+				<div class="flex items-center gap-2">
+					<span class="material-symbols-outlined text-[var(--accent)] text-xl">analytics</span>
+					<span class="font-bold text-[var(--text)]">Should-I</span>
+				</div>
+				<div class="flex gap-8 text-sm text-[var(--text-muted)]">
+					<a href="#" class="hover:text-[var(--text)]">Privacy Policy</a>
+					<a href="#" class="hover:text-[var(--text)]">Terms of Service</a>
+					<a href="#" class="hover:text-[var(--text)]">Contact</a>
+				</div>
+				<div class="text-xs text-[var(--text-muted)]">
+					© {new Date().getFullYear()} Should-I Inc. All rights reserved.
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

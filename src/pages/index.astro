@@ -1,16 +1,132 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+import InsightBlock from '../components/InsightBlock.astro';
+import Divider from '../components/Divider.astro';
+import CTABlock from '../components/CTABlock.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Home">
+	<!-- Hero Section -->
+	<Hero 
+		title="Make <span class='bg-[var(--accent)] text-white px-2'>better</span> business decisions — before they cost you real money."
+		subtitle="Most owners make big calls with incomplete information. Should-I shows you what's actually happening on the ground before you commit capital."
+	/>
+
+	<Divider />
+
+	<!-- Problem Section -->
+	<Section class="py-20 lg:py-32">
+		<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
+			<div class="lg:col-span-4">
+				<span class="block text-[var(--accent)] font-bold tracking-widest uppercase text-xs mb-4">The Problem</span>
+				<h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-[var(--text)] leading-tight">
+					The most expensive mistakes feel reasonable at the time.
+				</h2>
+			</div>
+			<div class="lg:col-span-8">
+				<p class="text-2xl font-light leading-relaxed text-[var(--text-muted)]">
+					Most business failures come from blind spots, not bad ideas. We provide the hard data you didn't know you needed—transforming vague intuition into calculated precision.
+				</p>
+				<div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-8 border-t border-[var(--border)] pt-8">
+					<InsightBlock 
+						title="Hidden Liabilities"
+						description="Zoning changes, upcoming construction, and hidden demographic shifts that act as silent killers for new locations."
+					/>
+					<InsightBlock 
+						title="Market Saturation"
+						description="Understanding not just who is there, but who is thriving and who is struggling, and exactly why."
+					/>
+				</div>
+			</div>
+		</div>
+	</Section>
+
+	<!-- Process Section (Solution) -->
+	<Section id="process" class="bg-white border-y border-[var(--border)]">
+		<div class="mb-16 md:mb-24">
+			<h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-[var(--text)]">Should-I gives you clarity before you decide.</h2>
+		</div>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+			<InsightBlock 
+				variant="step"
+				index="01"
+				title="You tell us about your business and decision."
+			/>
+			<InsightBlock 
+				variant="step"
+				index="02"
+				title="We analyse demand, competition, catchment behaviour, and economics."
+			/>
+			<InsightBlock 
+				variant="step"
+				index="03"
+				title="You receive a clear, decision-ready report — not a dashboard."
+			/>
+			<InsightBlock 
+				variant="step"
+				index="04"
+				title="You decide your next move with confidence."
+			/>
+		</div>
+		<div class="text-center pt-8 border-t border-gray-100 max-w-2xl mx-auto">
+			<p class="text-xl font-medium text-[var(--text-muted)] italic">"We don't tell you what to do. We show you what's true."</p>
+		</div>
+	</Section>
+
+	<!-- Industries Section -->
+	<Section id="industries">
+		<div class="mb-16">
+			<span class="block text-[var(--accent)] font-bold tracking-widest uppercase text-xs mb-4">Specialized Intelligence</span>
+			<h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-[var(--text)]">Built for specific industries — because context matters.</h2>
+		</div>
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+			<InsightBlock 
+				variant="card"
+				icon="local_laundry_service"
+				title="Laundromats"
+				description="High capital expenditure, location-dependent."
+				bullets={["Demand", "Saturation", "Pricing pressure", "Location viability"]}
+			/>
+			<InsightBlock 
+				variant="card"
+				icon="dentistry"
+				title="Dental Practices"
+				description="Relationship-driven, saturation sensitive."
+				bullets={["Patient access", "Competition", "Growth constraints"]}
+			/>
+		</div>
+	</Section>
+
+	<!-- Philosophy Section (About) -->
+	<Section id="about" class="bg-white border-t border-[var(--border)]">
+		<div class="mx-auto max-w-[800px] text-center">
+			<span class="material-symbols-outlined text-[var(--accent)] text-4xl mb-6">verified_user</span>
+			<h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-[var(--text)] mb-8">
+				Designed to reduce regret — not sell you a story.
+			</h2>
+			<div class="text-left md:text-center space-y-6">
+				<p class="text-lg text-[var(--text-muted)] leading-relaxed">
+					In a world of "move fast and break things," we believe in measuring twice and cutting once. Our reports are designed to be skeptical. We look for reasons <em>not</em> to invest, so when you finally do, you move forward with absolute conviction.
+				</p>
+			</div>
+		</div>
+	</Section>
+
+	<!-- Final CTA Section -->
+	<Section class="bg-[var(--bg)] border-t border-[var(--border)] py-24">
+		<div class="mx-auto max-w-[600px] flex flex-col items-center text-center">
+			<h2 class="text-3xl font-bold text-[var(--text)] mb-6">If this decision matters, clarity is worth a few minutes.</h2>
+			<p class="text-[var(--text-muted)] mb-8">
+				Your next big decision shouldn't be a gamble. Let's look at the numbers together.
+			</p>
+			<CTABlock href="https://go.should-i.ai/health-check" variant="primary" class="w-full sm:w-auto px-10">
+				Free Business Health Check
+			</CTABlock>
+			<p class="mt-4 text-xs text-[var(--text-muted)]">
+				No obligation. Real insight. Clear thinking.
+			</p>
+		</div>
+	</Section>
+</BaseLayout>

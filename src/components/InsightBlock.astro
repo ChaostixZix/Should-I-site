@@ -1,0 +1,49 @@
+---
+interface Props {
+	title: string;
+	description?: string;
+	icon?: string;
+	variant?: 'default' | 'card' | 'step';
+	index?: string;
+	bullets?: string[];
+}
+
+const { title, description, icon, variant = 'default', index, bullets = [] } = Astro.props;
+---
+
+{variant === 'default' && (
+	<div>
+		<h3 class="font-bold text-[var(--text)] mb-2">{title}</h3>
+		<p class="text-[var(--text-muted)] text-sm leading-relaxed">{description}</p>
+	</div>
+)}
+
+{variant === 'card' && (
+	<div class="bg-[var(--surface)] rounded border border-[var(--border)] p-8 lg:p-12 hover:border-[var(--accent)]/50 transition-colors">
+		{icon && (
+			<div class="size-12 rounded bg-[var(--bg)] flex items-center justify-center mb-6 text-[var(--accent)]">
+				<span class="material-symbols-outlined">{icon}</span>
+			</div>
+		)}
+		<h3 class="text-2xl font-bold text-[var(--text)] mb-2">{title}</h3>
+		{description && <p class="text-[var(--text-muted)] mb-8">{description}</p>}
+		
+		{bullets.length > 0 && (
+			<div class="space-y-4">
+				{bullets.map(bullet => (
+					<div class="flex items-start gap-3">
+						<span class="material-symbols-outlined text-[var(--accent)] text-sm mt-1">check_circle</span>
+						<span class="text-sm text-[var(--text)] font-medium">{bullet}</span>
+					</div>
+				))}
+			</div>
+		)}
+	</div>
+)}
+
+{variant === 'step' && (
+	<div class="flex flex-col gap-4 group">
+		<div class="text-6xl font-black text-gray-200 group-hover:text-[var(--accent)]/20 transition-colors select-none">{index}</div>
+		<h3 class="text-lg font-bold text-[var(--text)] leading-snug">{title}</h3>
+	</div>
+)}

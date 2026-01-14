@@ -1,0 +1,29 @@
+---
+import CTABlock from './CTABlock.astro';
+import TrustLine from './TrustLine.astro';
+
+interface Props {
+	title: string;
+	subtitle: string;
+}
+
+const { title, subtitle } = Astro.props;
+---
+
+<section class="relative flex min-h-[80vh] w-full flex-col justify-center px-6 lg:px-8 pt-20 pb-20">
+	<div class="mx-auto flex w-full max-w-[960px] flex-col items-center text-center">
+		<h1 class="font-black text-[var(--text)] text-5xl sm:text-6xl md:text-7xl leading-[1.1] tracking-[-0.03em] mb-8" set:html={title} />
+		<p class="max-w-[720px] text-lg sm:text-xl text-[var(--text-muted)] leading-relaxed mb-10 editorial-text">
+			{subtitle}
+		</p>
+		<div class="flex flex-col sm:flex-row gap-4 mb-6">
+			<CTABlock href="https://go.should-i.ai/health-check" variant="primary">
+				Free Business Health Check
+			</CTABlock>
+			<CTABlock href="https://go.should-i.ai/report-checkout" variant="secondary">
+				View Sample Report
+			</CTABlock>
+		</div>
+		<TrustLine />
+	</div>
+</section>
