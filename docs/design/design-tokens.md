@@ -70,29 +70,25 @@ Reference sites (copy the level of **restraint**, not the templates):
 ```css
 :root {
   /* Colors */
-  --color-background: #F7F8FA;
-  --color-surface: #FFFFFF;
-  --color-text: #111827;
-  --color-text-muted: #6B7280;
-  --color-border: #E5E7EB;
-  --color-accent: #0E7490;
-  
+  --bg: #F7F8FA;              /* Background */
+  --surface: #FFFFFF;         /* Cards/frames */
+  --text: #111827;            /* Body text */
+  --text-muted: #6B7280;      /* Secondary text */
+  --border: #E5E7EB;          /* Dividers */
+  --accent: #0E7490;          /* CTAs only - use sparingly */
+ 
   /* Typography */
-  --font-family: 'Inter', sans-serif;
-  --font-size-hero: 72px;
-  --font-size-h2: 48px;
-  --font-size-h3: 20px;
-  --font-size-body: 16px;
-  --font-weight-bold: 700;
-  --font-weight-semibold: 600;
-  --font-weight-regular: 400;
-  --line-height-heading: 1.1;
-  --line-height-body: 1.6;
-  
+  /* Import Inter via Google Fonts or local asset */
+  --font-family: 'Inter', system-ui, sans-serif;
+  --fs-hero: clamp(40px, 6vw, 72px);     /* Hero headlines - responsive */
+  --fs-h2: 48px;              /* Section headlines */
+  --fs-h3: 20px;              /* Sub-headlines */
+  --fs-body: 16px;            /* Body text */
+ 
   /* Spacing */
-  --section-padding-desktop: 160px;
+  --section-padding: 160px;   /* Vertical space between sections (desktop) */
   --section-padding-mobile: 80px;
-  --container-padding: 48px;
-  --max-width: 1280px;
+  --container-max: 1280px;    /* Max content width */
+  --container-padding: 48px;  /* Horizontal padding */
 }
 ```

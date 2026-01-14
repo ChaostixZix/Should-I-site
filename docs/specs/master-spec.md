@@ -27,6 +27,30 @@ The marketing website exists to:
 > Calm authority + visceral relevance beats cleverness.
 
 ---
+## 2a. Project Structure
+
+As per engineering guidelines, the project follows this rigid structure:
+
+```
+src/
+  components/
+    Hero.astro             (Hero section - large headline + CTA at top of pages)
+    Section.astro          (Generic content section wrapper - reusable container)
+    InsightBlock.astro     (Data visualization cards)
+    Divider.astro          (Subtle section separators)
+    CTABlock.astro         (Call-to-action buttons)
+    TrustLine.astro        (Social proof text)
+ 
+  layouts/
+    BaseLayout.astro       (Base template - wraps every page with nav, footer, meta tags)
+ 
+  pages/
+    index.astro            (Homepage)
+    example-report.astro   (Example report page)
+ 
+  styles/
+    global.css             (Site-wide styles - colors, typography, spacing)
+```
 
 ## 2. Architecture Overview
 
@@ -194,13 +218,13 @@ Gate full report access behind email capture (GHL).
 
 ### Visual philosophy
 - Neutral editorial base
-- One accent colour (deep teal)
+- One accent colour (`#0E7490`)
 - No dark mode
-- No gradients
 
-### Typography
-- Inter only (v1)
-- Clear hierarchy
+### Tokens
+Refer to `docs/design/design-tokens.md` for the exact CSS variables.
+- Colors: `--bg`, `--surface`, `--text`, `--accent`
+- Typography: Inter with responsive sizes (`--fs-hero`)
 
 ### CTAs
 - One primary CTA per section
