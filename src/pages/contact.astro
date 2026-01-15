@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+---
+
+<BaseLayout title="Contact">
+	<Section class="py-20 lg:py-32">
+		<div class="max-w-2xl mx-auto text-center">
+			<h1 class="text-4xl font-bold mb-8">Contact Us</h1>
+			<p class="text-xl text-[var(--text-muted)] mb-12">
+				Have questions about our reports or need a custom analysis? We're here to help.
+			</p>
+			<div class="bg-[var(--surface)] border border-[var(--border)] p-8 rounded-lg text-left">
+				<p class="font-bold mb-2">Email</p>
+				<p class="text-lg mb-6">hello@should-i.ai</p>
+				
+				<p class="font-bold mb-2">Office</p>
+				<p class="text-lg">Sydney, Australia</p>
+			</div>
+		</div>
+	</Section>
+</BaseLayout>

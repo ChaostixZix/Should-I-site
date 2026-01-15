@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/Section.astro';
+import InsightBlock from '../components/InsightBlock.astro';
+---
+
+<BaseLayout title="Industries">
+	<Section class="py-20 lg:py-32">
+		<div class="mb-16">
+			<span class="block text-[var(--accent)] font-bold tracking-widest uppercase text-xs mb-4">Specialized Intelligence</span>
+			<h1 class="text-4xl lg:text-5xl font-bold tracking-tight text-[var(--text)] mb-8">Built for specific industries.</h1>
+			<p class="text-xl text-[var(--text-muted)] max-w-2xl leading-relaxed">
+				Generic data leads to generic mistakes. We build custom models for high-stakes industries where location and catchment behavior are the primary drivers of success.
+			</p>
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+			<InsightBlock 
+				variant="card"
+				icon="local_laundry_service"
+				title="Laundromats"
+				description="Demand, saturation, pricing pressure, and location viability."
+				bullets={["Local Demand Analysis", "Competitive Saturation", "Pricing Pressure Signals", "Location Risk Assessment"]}
+			/>
+			<InsightBlock 
+				variant="card"
+				icon="dentistry"
+				title="Dental Practices"
+				description="Patient access, competition, and growth constraints."
+				bullets={["Patient Access Metrics", "Catchment Competition", "Growth Constraint Signals", "Payer Mix Indicators"]}
+			/>
+		<!-- Future industries can be added here -->
+		</div>
+	</Section>
+</BaseLayout>
