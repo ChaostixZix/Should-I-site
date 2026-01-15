@@ -4,25 +4,33 @@ import IntroSection from '../components/example-report/IntroSection.astro';
 import InsightCards from '../components/example-report/InsightCards.astro';
 import FeatureList from '../components/example-report/FeatureList.astro';
 import CTASection from '../components/example-report/CTASection.astro';
+import TableOfContents from '../components/example-report/TableOfContents.astro';
+import NextSteps from '../components/example-report/NextSteps.astro';
 
 const pageTitle = "Example Report - Should-I";
 const description = "See how Should-I analyses real demand, competition, and risk — before you invest or expand. Independent specific analysis.";
 ---
 
 <BaseLayout title={pageTitle} description={description}>
-  {/* 
-    CONSELLENCE REDESIGN 
-    - Intro: Glassy visuals
-    - Cards: Numbered row
-    - Features: Dark section with rounded top
-    - CTA: Floating blue bar
-  */}
-  <IntroSection />
-  
-  <InsightCards />
-  
-  <FeatureList />
-  
-  <CTASection href="https://go.should-i.ai/health-check" />
+  <div class="w-full px-6 lg:px-[var(--container-padding)] py-12 lg:py-24">
+    <div class="mx-auto max-w-[var(--container-max)]">
+      <div class="grid grid-cols-1 lg:grid-cols-[250px_1fr] gap-12 lg:gap-24 relative">
+        
+        {/* Sticky Sidebar (Desktop) */}
+        <aside class="hidden lg:block h-fit sticky top-32">
+           <TableOfContents />
+        </aside>
 
+        {/* Main Content */}
+        <main class="w-full max-w-[700px]">
+           <IntroSection />
+           <InsightCards />
+           <FeatureList />
+           <NextSteps />
+           <CTASection />
+        </main>
+
+      </div>
+    </div>
+  </div>
 </BaseLayout>

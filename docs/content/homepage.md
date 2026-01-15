@@ -6,7 +6,7 @@ Convert first-time visitors by naming the financial risk clearly, establishing a
 ---
 
 ## SEO Framing
-**H1:** Make better business decisions — before they cost you real money  
+**H1:** Make better business decisions — before the consequences are hard to reverse.  
 **Meta description:** Independent, industry-specific analysis that helps business owners avoid expensive mistakes when expanding, buying, or exiting.
 
 ---
@@ -14,7 +14,7 @@ Convert first-time visitors by naming the financial risk clearly, establishing a
 ## Hero Section
 
 ### Headline
-**Make better business decisions — before they cost you real money.**
+**Make better business decisions — before the consequences are hard to reverse.**
 
 ### Subheadline
 Most owners make big calls with incomplete information.  
@@ -35,13 +35,12 @@ Independent. Industry-specific. No sales agenda.
 ## Problem Section
 
 ### Heading
-**The most expensive mistakes feel reasonable at the time.**
+**The most expensive mistakes usually feel reasonable at the time.**
 
 ### Copy
-Buying the wrong location. Expanding into a saturated catchment.  
-Overpaying for a business that looks good on paper.
+Most business failures don’t come from bad ideas. They come from blind spots — important constraints that weren’t visible early enough.
 
-Most of these mistakes aren’t caused by bad judgement — they’re caused by missing information.
+For example, a location can look viable on paper, but quietly fail once travel tolerance, competitor clustering just outside the visible strip, or local pricing sensitivity are properly understood.
 
 Should-I exists to surface that information *before* you commit.
 
@@ -55,7 +54,7 @@ Should-I exists to surface that information *before* you commit.
 ### Steps
 1. You tell us about your business and decision.  
 2. We analyse demand, competition, catchment behaviour, and economics.  
-3. You receive a clear, decision-ready report — not a dashboard.  
+3. You receive a clear, decision-ready report — not a dashboard — explaining what the data means and why it matters for your decision.  
 4. You decide your next move with confidence.
 
 We don’t tell you what to do.  

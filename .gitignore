@@ -22,3 +22,7 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+.agent/skills/app-context/SKILL.md
+.opencode/skill/app-context/SKILL.md
+AGENTS.md
+GEMINI.md

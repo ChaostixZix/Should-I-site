@@ -1,52 +1,15 @@
 ---
-import Section from '../Section.astro';
 ---
 
-<Section class="py-24 lg:py-40 relative">
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
-    
-    {/* Left Content */}
-    <div class="relative z-10 flex flex-col justify-center">
-      <h1 class="text-5xl lg:text-7xl font-bold tracking-tight text-[var(--text)] mb-6 leading-[1.1]">
-        This is <span class="text-[var(--accent)]">not</span> a generic market summary.
-      </h1>
-
-      <p class="text-xl lg:text-2xl text-[var(--text-muted)] mb-8 max-w-lg">
-        A Should-I report is designed to answer one question:
-      </p>
-
-      {/* Glassy Quote Block */}
-      <blockquote class="text-2xl lg:text-3xl font-medium text-[var(--text)] bg-white/60 backdrop-blur-md border border-[var(--border)] rounded-2xl p-8 shadow-sm">
-        “If I go ahead with this decision, what am I <span class="italic text-[var(--accent)]">not</span> seeing right now?”
-      </blockquote>
-
-      <p class="text-lg text-[var(--text-muted)] mt-8">
-        Below are examples of the kinds of insights owners receive.
-      </p>
-    </div>
-
-    {/* Right Visual (Abstract Iridescent Object) */}
-    <div class="relative h-[500px] w-full flex items-center justify-center lg:justify-end">
-      {/* CSS-only Abstract Shape Simulation */}
-      <div class="relative w-[400px] h-[400px] animate-float">
-        {/* Main iridescence */}
-        <div class="absolute inset-0 bg-gradient-to-br from-[var(--accent)] via-purple-500 to-pink-500 rounded-[3rem] opacity-80 blur-lg mix-blend-multiply filter"></div>
-        <div class="absolute inset-4 bg-gradient-to-tl from-blue-400 via-teal-300 to-yellow-200 rounded-[2.5rem] opacity-90 blur-md mix-blend-overlay"></div>
-        {/* 'Glass' surface */}
-        <div class="absolute inset-0 bg-white/10 backdrop-blur-sm rounded-[3rem] border border-white/40 shadow-2xl skew-y-3 skew-x-3 rotate-6"></div>
-        <div class="absolute -inset-10 bg-[var(--accent)]/20 rounded-full blur-3xl -z-10"></div>
-      </div>
-    </div>
-
-  </div>
-</Section>
-
-<style>
-  @keyframes float {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(2deg); }
-  }
-  .animate-float {
-    animation: float 8s ease-in-out infinite;
-  }
-</style>
+<div id="overview" class="pb-20 lg:pb-32 border-b border-[var(--border)]">
+  <span class="block text-[var(--accent)] font-mono text-xs font-bold tracking-widest uppercase mb-6">The Example Report</span>
+  <h1 class="text-4xl lg:text-6xl font-black tracking-tighter text-[var(--text)] mb-8 leading-[1.1]">
+    What a Should-I Report Actually Shows You
+  </h1>
+  <p class="text-xl text-[var(--text-muted)] leading-relaxed max-w-2xl">
+    This page is not an example of the full report, and it is not a product demo. Its purpose is to demonstrate the quality of insight and thinking we provide.
+  </p>
+  <p class="text-xl text-[var(--text-muted)] leading-relaxed max-w-2xl mt-4">
+    Below are three short example insights to show how we think, not everything we deliver.
+  </p>
+</div>

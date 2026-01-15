@@ -1,54 +1,47 @@
 ---
-import Section from '../Section.astro';
+const features = [
+  {
+    title: "Local demand analysis",
+    desc: "How much real demand exists within practical reach of the business, based on how customers actually behave — not just population totals."
+  },
+  {
+    title: "Catchment and accessibility assessment",
+    desc: "How far customers are realistically willing to travel, and how location, access, and surrounding infrastructure affect viability."
+  },
+  {
+    title: "Customer persona composition",
+    desc: "Who the dominant customer types are in the area, what they value, and how that shapes pricing power and positioning."
+  },
+  {
+    title: "Competitive landscape and saturation",
+    desc: "A full view of direct and indirect competitors, including density, clustering, and structural limits on growth."
+  },
+  {
+    title: "Economic and viability signals",
+    desc: "Cost pressures, margin sensitivity, and conditions that reduce tolerance for error — even when the idea itself appears sound."
+  },
+  {
+    title: "Plain-English decision implications",
+    desc: "Clear explanations of what the findings mean for your decision, including constraints, risks, and areas that deserve caution."
+  }
+];
 ---
 
-{/* Negative margin pulls this section UP to create the overlap or seamless curve effect if needed, but here we use the specific rounded top shape */}
-<div class="bg-[#111827] text-white pt-24 lg:pt-32 pb-24 rounded-t-[3rem] lg:rounded-t-[5rem] relative z-10 -mt-20">
-  <Section>
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 relative">
-      
-      {/* Header */}
-      <div class="lg:col-span-5">
-        <span class="block text-[var(--accent)] font-bold tracking-widest uppercase text-sm mb-4">Included in Scope</span>
-        <h2 class="text-4xl lg:text-5xl font-bold tracking-tight mb-6">What the Full Report Includes</h2>
-        <p class="text-lg text-gray-400 max-w-md mb-8">No jargon. No dashboards. No fluff.</p>
+<div id="features" class="py-24 border-t border-[var(--border)]">
+  <h2 class="text-3xl lg:text-4xl font-bold text-[var(--text)] mb-12 tracking-tight">
+    What the Full Report Includes
+  </h2>
+
+  <div class="space-y-12">
+    {features.map(feature => (
+      <div>
+        <h3 class="text-xl font-bold text-[var(--text)] mb-3">
+          {feature.title}
+        </h3>
+        <p class="text-lg text-[var(--text-muted)] leading-relaxed max-w-3xl">
+          {feature.desc}
+        </p>
       </div>
-
-      {/* List */}
-      <div class="lg:col-span-7 flex flex-col justify-center">
-        <div class="divide-y divide-gray-800">
-          
-          <div class="py-6 flex items-center gap-6 group">
-            <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-[var(--accent)] group-hover:bg-[var(--accent)] group-hover:text-white transition-colors">
-              <span class="material-symbols-outlined text-xl">check</span>
-            </div>
-            <span class="text-xl lg:text-2xl font-medium">Demand and catchment analysis</span>
-          </div>
-
-          <div class="py-6 flex items-center gap-6 group">
-            <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-[var(--accent)] group-hover:bg-[var(--accent)] group-hover:text-white transition-colors">
-              <span class="material-symbols-outlined text-xl">check</span>
-            </div>
-            <span class="text-xl lg:text-2xl font-medium">Competitive positioning</span>
-          </div>
-
-          <div class="py-6 flex items-center gap-6 group">
-            <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-[var(--accent)] group-hover:bg-[var(--accent)] group-hover:text-white transition-colors">
-              <span class="material-symbols-outlined text-xl">check</span>
-            </div>
-            <span class="text-xl lg:text-2xl font-medium">Risk flags and constraint mapping</span>
-          </div>
-
-          <div class="py-6 flex items-center gap-6 group">
-            <div class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-[var(--accent)] group-hover:bg-[var(--accent)] group-hover:text-white transition-colors">
-              <span class="material-symbols-outlined text-xl">check</span>
-            </div>
-            <span class="text-xl lg:text-2xl font-medium">Decision implications explained plainly</span>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </Section>
+    ))}
+  </div>
 </div>

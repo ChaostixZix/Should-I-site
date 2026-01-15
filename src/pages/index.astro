@@ -5,14 +5,34 @@ import Section from '../components/Section.astro';
 import InsightBlock from '../components/InsightBlock.astro';
 import Divider from '../components/Divider.astro';
 import CTABlock from '../components/CTABlock.astro';
+import ReportMockup from '../components/mockups/ReportMockup.astro';
 ---
 
 <BaseLayout title="Home">
 	<!-- Hero Section -->
-	<Hero 
-		title="Make <span class='bg-[var(--accent)] text-white px-2'>better</span> business decisions — before they cost you real money."
-		subtitle="Most owners make big calls with incomplete information. Should-I shows you what's actually happening on the ground before you commit capital."
-	/>
+	<section class="relative flex min-h-[90vh] w-full flex-col justify-center px-6 lg:px-8 pt-20 pb-20">
+		<div class="mx-auto flex w-full max-w-[var(--container-max)] flex-col items-center text-center">
+			<h1 class="font-black text-[var(--text)] text-5xl sm:text-6xl md:text-8xl leading-[1.05] tracking-[-0.04em] mb-8">
+				Make <span class="text-[var(--accent)]">better</span> business decisions — before the consequences are hard to reverse.
+			</h1>
+			<p class="max-w-[800px] text-xl sm:text-2xl text-[var(--text-muted)] font-medium leading-tight mb-12">
+				Most owners make big calls with incomplete information. Should-I shows you what’s actually happening on the ground before you commit capital.
+			</p>
+			<div class="flex flex-col sm:flex-row gap-4 mb-16">
+				<CTABlock href="https://go.should-i.ai/health-check" variant="primary" class="px-10 py-5 text-lg font-bold">
+					Free Business Health Check
+				</CTABlock>
+				<CTABlock href="/example-report" variant="secondary" class="px-10 py-5 text-lg font-bold">
+					View Example Report
+				</CTABlock>
+			</div>
+			
+			<!-- Trust Line -->
+			<div class="flex flex-wrap justify-center gap-x-12 gap-y-6 opacity-60">
+				<span class="text-sm font-bold uppercase tracking-[0.2em] text-[var(--text-muted)]">Independent. Industry-specific. No sales agenda.</span>
+			</div>
+		</div>
+	</section>
 
 	<Divider />
 
@@ -21,22 +41,25 @@ import CTABlock from '../components/CTABlock.astro';
 		<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
 			<div class="lg:col-span-4">
 				<span class="block text-[var(--accent)] font-bold tracking-widest uppercase text-xs mb-4">The Problem</span>
-				<h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-[var(--text)] leading-tight">
-					The most expensive mistakes feel reasonable at the time.
-				</h2>
+			<h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-[var(--text)] leading-tight">
+				The most expensive mistakes usually feel reasonable at the time.
+			</h2>
 			</div>
 			<div class="lg:col-span-8">
-				<p class="text-2xl font-light leading-relaxed text-[var(--text-muted)]">
-					Most business failures come from blind spots, not bad ideas. We provide the hard data you didn't know you needed—transforming vague intuition into calculated precision.
-				</p>
-				<div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-8 border-t border-[var(--border)] pt-8">
+			<p class="text-2xl font-light leading-relaxed text-[var(--text-muted)]">
+				Most business failures don’t come from bad ideas. They come from blind spots — important constraints that weren’t visible early enough.
+			</p>
+			<p class="mt-6 text-lg text-[var(--text-muted)] leading-relaxed">
+				For example, a location can look viable on paper, but quietly fail once travel tolerance, competitor clustering just outside the visible strip, or local pricing sensitivity are properly understood.
+			</p>
+				<div class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-8 border-t border-[var(--border)] pt-12">
 					<InsightBlock 
-						title="Hidden Liabilities"
-						description="Zoning changes, upcoming construction, and hidden demographic shifts that act as silent killers for new locations."
+						title="Missing Demand Data"
+						description="Going where the people are isn't enough. You need to know where they spend, not just where they live."
 					/>
 					<InsightBlock 
-						title="Market Saturation"
-						description="Understanding not just who is there, but who is thriving and who is struggling, and exactly why."
+						title="Saturation Blindness"
+						description="A busy street can still be a graveyard for new businesses if the local capacity is already peaked."
 					/>
 				</div>
 			</div>
@@ -62,7 +85,103 @@ import CTABlock from '../components/CTABlock.astro';
 			<InsightBlock 
 				variant="step"
 				index="03"
-				title="You receive a clear, decision-ready report — not a dashboard."
+				title="You receive a clear, decision-ready report — not a dashboard — explaining what the data means and why it matters for your decision."
+			/>
+			<InsightBlock 
+				variant="step"
+				index="04"
+				title="You decide your next move with confidence."
+			/>
+		</div>
+		<div class="text-center pt-8 border-t border-gray-100 max-w-2xl mx-auto">
+			<p class="text-xl font-medium text-[var(--text-muted)] italic">"We don't tell you what to do. We show you what's true."</p>
+		</div>
+	</Section>
+
+	<!-- Industries Section -->
+	<Section id="industries">
+		<div class="mb-16">
+			<span class="block text-[var(--accent)] font-bold tracking-widest uppercase text-xs mb-4">Specialized Intelligence</span>
+			<h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-[var(--text)]">Built for specific industries — because context matters.</h2>
+		</div>
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+			<InsightBlock 
+				variant="card"
+				icon="local_laundry_service"
+				title="Laundromats"
+				description="Demand, saturation, pricing pressure, and location viability."
+				bullets={["Local Demand Analysis", "Competitive Saturation", "Pricing Pressure Signals", "Location Risk Assessment"]}
+			/>
+			<InsightBlock 
+				variant="card"
+				icon="dentistry"
+				title="Dental Practices"
+				description="Patient access, competition, and growth constraints."
+				bullets={["Patient Access Metrics", "Catchment Competition", "Growth Constraint Signals", "Payer Mix Indicators"]}
+			/>
+		</div>
+		<div class="mt-12 text-center">
+			<CTABlock href="/industries" variant="secondary" class="inline-flex">
+				View all industries →
+			</CTABlock>
+		</div>
+	</Section>
+
+	<!-- Proof Section -->
+	<Section class="bg-[var(--surface)] border-y border-[var(--border)]">
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+			<div>
+				<h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-[var(--text)] mb-6">This isn’t generic AI output.</h2>
+				<p class="text-lg text-[var(--text-muted)] mb-8">
+					Your report is built on top of proprietary datasets and industry-specific models designed to find red flags that generic tools miss.
+				</p>
+				<div class="space-y-4">
+					{[
+						"Local demand and catchment analysis",
+						"Competitive density and saturation signals",
+						"Economic viability indicators",
+						"Clear red flags and opportunity zones",
+						"Plain-English implications for your decision"
+					].map(item => (
+						<div class="flex items-center gap-3">
+							<span class="material-symbols-outlined text-[var(--accent)]">check_circle</span>
+							<span class="font-medium text-[var(--text)]">{item}</span>
+						</div>
+					))}
+				</div>
+				<div class="mt-10">
+					<CTABlock href="/example-report" variant="secondary">
+						View example report →
+					</CTABlock>
+				</div>
+			</div>
+			
+			<div class="flex items-center justify-center">
+				<ReportMockup class="scale-90 lg:scale-100" />
+			</div>
+		</div>
+	</Section>
+
+	<!-- Process Section (Solution) -->
+	<Section id="process" class="bg-white border-y border-[var(--border)]">
+		<div class="mb-16 md:mb-24">
+			<h2 class="text-3xl lg:text-4xl font-bold tracking-tight text-[var(--text)]">Should-I gives you clarity before you decide.</h2>
+		</div>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+			<InsightBlock 
+				variant="step"
+				index="01"
+				title="You tell us about your business and decision."
+			/>
+			<InsightBlock 
+				variant="step"
+				index="02"
+				title="We analyse demand, competition, catchment behaviour, and economics."
+			/>
+			<InsightBlock 
+				variant="step"
+				index="03"
+				title="You receive a clear, decision-ready report — not a dashboard — explaining what the data means and why it matters for your decision."
 			/>
 			<InsightBlock 
 				variant="step"

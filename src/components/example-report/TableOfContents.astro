@@ -1,0 +1,69 @@
+---
+const sections = [
+  { id: "overview", label: "Overview" },
+  { id: "insight-1", label: "Insight 1: Customer Personas" },
+  { id: "insight-2", label: "Insight 2: Competition Density" },
+  { id: "insight-3", label: "Insight 3: Economic Signals" },
+  { id: "features", label: "What the Full Report Includes" },
+  { id: "next-steps", label: "What Comes Next" },
+];
+---
+
+<nav class="toc-nav hidden lg:block sticky top-32 h-fit w-64 pr-8">
+  <span class="block text-[10px] uppercase tracking-widest text-[var(--text-muted)] font-mono mb-6">On This Page</span>
+  <ul class="space-y-4">
+    {sections.map(section => (
+      <li>
+        <a 
+          href={`#${section.id}`} 
+          class="toc-link block text-sm text-[var(--text-muted)] hover:text-[var(--text)] transition-colors border-l-2 border-transparent pl-4 py-0.5"
+          data-target={section.id}
+        >
+          {section.label}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<script>
+  function initTOC() {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Remove active class from all links
+          document.querySelectorAll('.toc-link').forEach(link => {
+            link.classList.remove('active', 'text-[var(--accent)]', 'border-[var(--accent)]');
+            link.classList.add('border-transparent');
+          });
+          
+          // Add active class to current link
+          const activeLink = document.querySelector(`.toc-link[data-target="${entry.target.id}"]`);
+          if (activeLink) {
+            activeLink.classList.add('active', 'text-[var(--accent)]', 'border-[var(--accent)]');
+            activeLink.classList.remove('border-transparent');
+          }
+        }
+      });
+    }, {
+      rootMargin: '-20% 0px -60% 0px' // Highlighting triggers when section is near top
+    });
+
+    // Observe all sections
+    document.querySelectorAll('section[id], div[id]').forEach((section) => {
+      observer.observe(section);
+    });
+  }
+
+  // Run on load
+  initTOC();
+  
+  // Re-run on view transitions if enabled
+  document.addEventListener('astro:page-load', initTOC);
+</script>
+
+<style>
+  .toc-link.active {
+    font-weight: 500;
+  }
+</style>

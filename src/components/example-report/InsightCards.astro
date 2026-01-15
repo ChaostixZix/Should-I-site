@@ -1,75 +1,55 @@
 ---
-import Section from '../Section.astro';
-
 const insights = [
   {
-    index: "01",
-    title: "Who actually lives within reach of your business matters more than foot traffic.",
-    stat: "78% of the local catchment were classified as “Convenience Pragmatists”",
-    details: ["Price sensitivity was high", "Travel tolerance was low"],
-    implication: "Premium positioning would struggle regardless of marketing spend."
+    id: "insight-1",
+    label: "INSIGHT 01",
+    title: "Customer Personas Shape Viability More Than Demand Size",
+    observation: "In many local markets, overall demand appears healthy, but the type of customer in the catchment determines whether a business can succeed. In one analysis, the dominant local personas prioritised convenience, price certainty, and minimal travel time over brand, experience, or premium offerings.",
+    reason: "A business model that relies on differentiation or higher margins can struggle in areas where customers are primarily motivated by proximity and price. Understanding who the market is matters just as much as how big it is."
   },
   {
-    index: "02",
-    title: "Competition density quietly caps your upside.",
-    stat: "11 direct competitors within a 10-minute drive",
-    details: ["4 offering aggressive price discounting", "Flat population growth over five years"],
-    implication: "Expansion increases operational risk without increasing total demand."
+    id: "insight-2",
+    label: "INSIGHT 02",
+    title: "Competition Density Quietly Caps Growth Potential",
+    observation: "Looking beyond obvious competitors revealed a high concentration of similar businesses within a short travel radius, including indirect substitutes that don’t always appear in surface-level analysis. While each competitor was viable on its own, the combined density placed a natural ceiling on growth.",
+    reason: "When total demand is shared across too many providers, expansion doesn’t increase opportunity — it increases operational pressure. This is rarely obvious without mapping the full competitive landscape."
   },
   {
-    index: "03",
-    title: "Revenue potential is only half the equation.",
-    stat: "Margins compressed below sustainable thresholds even with optimistic assumptions",
-    details: ["Rising fixed costs absorbed most growth"],
-    implication: "The decision wasn’t “bad” — it was mistimed."
+    id: "insight-3",
+    label: "INSIGHT 03",
+    title: "Economic Signals Can Undermine Otherwise Sound Decisions",
+    observation: "Even where demand and competition looked acceptable, local cost pressures and pricing constraints reduced the margin for error. In these cases, small changes in costs or utilisation materially altered the viability of the decision.",
+    reason: "Decisions don’t fail because the idea is wrong — they fail because conditions leave no room for normal variability. Identifying this early helps avoid committing to situations where the risk is asymmetrical."
   }
 ];
 ---
 
-<Section class="pb-32 lg:pb-48 relative z-20"> {/* Increased padding bottom to clear the rounded overlap below */}
-  
-  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-    
-    {insights.map((item) => (
-      <div class="bg-[var(--surface)]  rounded-2xl p-8 lg:p-10 flex flex-col h-full shadow-sm hover:shadow-xl transition-all duration-300 group relative border border-gray-100">
-        
-        {/* Number Badge */}
-        <div class="text-[var(--accent)] text-4xl font-bold opacity-30 group-hover:opacity-100 transition-opacity mb-6">
-          {item.index}
-        </div>
+<div class="flex flex-col">
+  {insights.map((item) => (
+    <div id={item.id} class="border-b border-[var(--border)] py-20 lg:py-24 last:border-0">
+      
+      <span class="block text-[var(--accent)] font-mono text-xs font-bold tracking-widest uppercase mb-6">
+        {item.label}
+      </span>
 
-        {/* Heading */}
-        <h3 class="text-xl font-bold text-[var(--text)] leading-tight mb-8 min-h-[56px] group-hover:text-[var(--accent)] transition-colors">
-          {item.title}
-        </h3>
-
-        {/* Highlighted Stat */}
-        <div class="mb-6 p-4 bg-[var(--bg)] rounded-xl border border-[var(--border)]">
-           <div class="text-lg font-bold text-[var(--text)] leading-tight">
-             {item.stat}
-           </div>
-        </div>
-           
-        {/* Bullets */}
-        <ul class="space-y-3 mb-8 grow">
-           {item.details.map(detail => (
-             <li class="text-[var(--text-muted)] text-sm flex items-start gap-3">
-               <span class="block w-1.5 h-1.5 rounded-full bg-[var(--accent)] mt-1.5 shrink-0"></span>
-               {detail}
-             </li>
-           ))}
-        </ul>
-
-        {/* Implication (Footer) */}
-        <div class="border-t border-[var(--border)] pt-6 mt-auto">
-          <span class="block text-[10px] font-bold text-[var(--text-muted)] uppercase tracking-widest mb-2">The Implication</span>
-          <p class="text-[var(--text)] font-medium text-sm leading-relaxed">
-            {item.implication}
-          </p>
-        </div>
-
+      <h3 class="text-2xl lg:text-3xl font-bold text-[var(--text)] mb-8 leading-tight tracking-tight">
+        {item.title}
+      </h3>
+      
+      <div class="mb-8">
+        <span class="block text-sm font-bold text-[var(--text)] uppercase tracking-wide mb-2">What we observed</span>
+        <p class="text-lg text-[var(--text-muted)] leading-relaxed">
+          {item.observation}
+        </p>
       </div>
-    ))}
 
-  </div>
-</Section>
+      <div class="bg-[var(--bg)] p-6 lg:p-8 rounded border border-[var(--border)]">
+        <span class="block text-sm font-bold text-[var(--text)] uppercase tracking-wide mb-2">Why this matters</span>
+        <p class="text-lg text-[var(--text-muted)] leading-relaxed italic">
+          {item.reason}
+        </p>
+      </div>
+
+    </div>
+  ))}
+</div>

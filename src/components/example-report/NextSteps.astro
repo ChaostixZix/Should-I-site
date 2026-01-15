@@ -1,0 +1,30 @@
+---
+---
+
+<div id="next-steps" class="py-24 border-t border-[var(--border)]">
+  <div class="bg-[var(--bg)]/50 rounded-lg p-8 lg:p-12 border border-[var(--border)]">
+    <h2 class="text-2xl font-bold text-[var(--text)] mb-6">What Comes Next</h2>
+    
+    <p class="text-lg text-[var(--text-muted)] mb-8 leading-relaxed">
+      Depending on the situation, the Market & Viability Report can be complemented by additional, more focused reports (available separately), such as:
+    </p>
+
+    <ul class="space-y-4 mb-8">
+      {[
+        "Competitive positioning deep dives",
+        "Location and site comparison analysis",
+        "Financial sensitivity and scenario testing",
+        "Strategic next-step recommendations"
+      ].map(item => (
+        <li class="flex items-start gap-3 text-[var(--text)]">
+          <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[var(--accent)] shrink-0"></span>
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+
+    <p class="text-[var(--text-muted)] italic">
+      These are only relevant once core viability is understood.
+    </p>
+  </div>
+</div>
