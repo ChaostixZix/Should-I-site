@@ -2,54 +2,64 @@
 const features = [
   {
     title: "Local demand analysis",
-    desc: "How much real demand exists within practical reach of the business, based on how customers actually behave — not just population totals."
+    desc: "How much real demand exists within practical reach of the business, based on how customers actually behave — not just population totals.",
   },
   {
     title: "Catchment and accessibility assessment",
-    desc: "How far customers are realistically willing to travel, and how location, access, and surrounding infrastructure affect viability."
+    desc: "How far customers are realistically willing to travel, and how location, access, and surrounding infrastructure affect viability.",
   },
   {
     title: "Customer persona composition",
-    desc: "Who the dominant customer types are in the area, what they value, and how that shapes pricing power and positioning."
+    desc: "Who the dominant customer types are in the area, what they value, and how that shapes pricing power and positioning.",
   },
   {
     title: "Competitive landscape and saturation",
-    desc: "A full view of direct and indirect competitors, including density, clustering, and structural limits on growth."
+    desc: "A full view of direct and indirect competitors, including density, clustering, and structural limits on growth.",
   },
   {
     title: "Economic and viability signals",
-    desc: "Cost pressures, margin sensitivity, and conditions that reduce tolerance for error — even when the idea itself appears sound."
+    desc: "Cost pressures, margin sensitivity, and conditions that reduce tolerance for error — even when the idea itself appears sound.",
   },
   {
     title: "Plain-English decision implications",
-    desc: "Clear explanations of what the findings mean for your decision, including constraints, risks, and areas that deserve caution."
-  }
+    desc: "Clear explanations of what the findings mean for your decision, including constraints, risks, and areas that deserve caution.",
+  },
 ];
 ---
 
 <div id="features" class="py-24 border-t border-[var(--border)]">
-  <h2 class="text-3xl lg:text-4xl font-bold text-[var(--text)] mb-6 tracking-tight">
+  <h2
+    class="text-3xl lg:text-4xl font-bold text-[var(--text)] mb-6 tracking-tight"
+  >
     What the Full Report Includes (Report 1)
   </h2>
-  
+
   <p class="text-xl text-[var(--text-muted)] leading-relaxed mb-12 max-w-3xl">
-    The full Market & Viability Report is designed to help you understand whether a decision makes sense before you expand, relocate, acquire, invest further, or commit additional capital.
+    The full Market & Viability Report is designed to help existing business
+    owners assess whether a decision makes sense <em>before</em> committing additional
+    capital — whether that decision involves expansion, relocation, acquisition, or
+    changing direction.
   </p>
 
   <div class="space-y-12 mb-16">
-    {features.map(feature => (
-      <div>
-        <h3 class="text-xl font-bold text-[var(--text)] mb-3">
-          {feature.title}
-        </h3>
-        <p class="text-lg text-[var(--text-muted)] leading-relaxed max-w-3xl">
-          {feature.desc}
-        </p>
-      </div>
-    ))}
+    {
+      features.map((feature) => (
+        <div>
+          <h3 class="text-xl font-bold text-[var(--text)] mb-3">
+            {feature.title}
+          </h3>
+          <p class="text-lg text-[var(--text-muted)] leading-relaxed max-w-3xl">
+            {feature.desc}
+          </p>
+        </div>
+      ))
+    }
   </div>
 
-  <p class="text-xl font-medium text-[var(--text)] leading-relaxed max-w-3xl border-l-2 border-[var(--accent)] pl-6">
-    This report is intentionally written as a decision document, not a data dump or dashboard.
+  <p
+    class="text-xl font-medium text-[var(--text)] leading-relaxed max-w-3xl border-l-2 border-[var(--accent)] pl-6"
+  >
+    This report is intentionally written as a decision document, not a data dump
+    or dashboard.
   </p>
 </div>
