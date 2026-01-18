@@ -1,30 +1,88 @@
 ---
+import CTABlock from "../CTABlock.astro";
 ---
 
 <div id="next-steps" class="py-24 border-t border-[var(--border)]">
   <div class="bg-[var(--bg)]/50 rounded-lg p-8 lg:p-12 border border-[var(--border)]">
-    <h2 class="text-2xl font-bold text-[var(--text)] mb-6">What Comes Next</h2>
+    <h2 class="text-2xl font-bold text-[var(--text)] mb-6">
+      How This Report Fits Into the Should-I Intelligence Suite
+    </h2>
     
     <p class="text-lg text-[var(--text-muted)] mb-8 leading-relaxed">
-      Depending on the situation, the Market & Viability Report can be complemented by additional, more focused reports (available separately), such as:
+      Market Validation is where every decision starts. It establishes whether
+      an idea or business has a viable foundation before deeper analysis or
+      capital is committed.
     </p>
 
-    <ul class="space-y-4 mb-8">
-      {[
-        "Competitive positioning deep dives",
-        "Location and site comparison analysis",
-        "Financial sensitivity and scenario testing",
-        "Strategic next-step recommendations"
-      ].map(item => (
-        <li class="flex items-start gap-3 text-[var(--text)]">
-          <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-[var(--accent)] shrink-0"></span>
-          <span>{item}</span>
-        </li>
-      ))}
+    <p class="text-lg text-[var(--text-muted)] mb-8 leading-relaxed">
+      After Market Validation, customers typically explore additional analysis
+      depending on what this first report reveals:
+    </p>
+
+    <ul class="space-y-5 mb-10">
+      <li class="flex items-start gap-3 text-[var(--text)]">
+        <span class="mt-2 w-1.5 h-1.5 rounded-full bg-[var(--accent)] shrink-0"></span>
+        <div>
+          <div class="font-bold">Competitor Intelligence</div>
+          <div class="text-[var(--text-muted)]">
+            To understand who already owns demand, where pressure points exist,
+            and whether differentiation is realistic.
+          </div>
+        </div>
+      </li>
+      <li class="flex items-start gap-3 text-[var(--text)]">
+        <span class="mt-2 w-1.5 h-1.5 rounded-full bg-[var(--accent)] shrink-0"></span>
+        <div>
+          <div class="font-bold">Digital Presence &amp; Demand Signals</div>
+          <div class="text-[var(--text-muted)]">
+            To assess how customers actually discover, compare, and choose
+            providers — not just who exists on a map.
+          </div>
+        </div>
+      </li>
+      <li class="flex items-start gap-3 text-[var(--text)]">
+        <span class="mt-2 w-1.5 h-1.5 rounded-full bg-[var(--accent)] shrink-0"></span>
+        <div>
+          <div class="font-bold">Operational Effectiveness</div>
+          <div class="text-[var(--text-muted)]">
+            To identify internal constraints that may cap upside even in strong
+            markets.
+          </div>
+        </div>
+      </li>
+      <li class="flex items-start gap-3 text-[var(--text)]">
+        <span class="mt-2 w-1.5 h-1.5 rounded-full bg-[var(--accent)] shrink-0"></span>
+        <div>
+          <div class="font-bold">Business Viability &amp; Scenario Testing</div>
+          <div class="text-[var(--text-muted)]">
+            To stress-test expansion, acquisition, relocation, or reinvestment
+            decisions before committing capital.
+          </div>
+        </div>
+      </li>
     </ul>
 
-    <p class="text-[var(--text-muted)] italic">
-      These are only relevant once core viability is understood.
+    <p class="text-[var(--text-muted)] leading-relaxed mb-8">
+      When used together, these reports form a live decision-intelligence
+      layer — retaining context, assumptions, and data so business owners can
+      consult an on-demand AI analyst trained on their specific business.
     </p>
+
+    <div class="flex flex-col sm:flex-row gap-4">
+      <CTABlock
+        href="https://go.should-i.ai/health-check"
+        variant="primary"
+        class="px-8 py-4 text-sm font-bold"
+      >
+        Start with a Free Business Health Check
+      </CTABlock>
+      <CTABlock
+        href="/how-it-works"
+        variant="secondary"
+        class="px-8 py-4 text-sm font-medium"
+      >
+        See How the Intelligence Suite Works
+      </CTABlock>
+    </div>
   </div>
 </div>
